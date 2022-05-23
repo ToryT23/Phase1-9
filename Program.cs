@@ -34,18 +34,32 @@ using System.Collections.Generic;
 //         static void Main(string[] args)
 //         {
 
-            Console.WriteLine("Guess a secret number?");
+// Phase 3
+// The program should be updated to...
+// Give the user four chances to guess the number.
+// Continue to display the success or failure messages as in phase 2
+
+
+
+// int i = 0;
+
+for (int i = 0; i < 4; i++)
+{
+    Console.WriteLine($"How many chances left {4 - i}");
+
+        Console.WriteLine("Guess a secret number?");
            string num = Console.ReadLine();
            int parsedInput = int.Parse(num);
 
-        
-    
 int secretNumber = 42;
-if (parsedInput == secretNumber)
+if (parsedInput == secretNumber && i <= 4)
 {
     Console.WriteLine("Great you got it");
+    break;
 }
-else
+else 
 {
     Console.WriteLine("Sorry try again");
+}
+
 }
