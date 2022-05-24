@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 using System.Collections.Generic;
 // Phase 1
 // The program should...
@@ -39,9 +40,22 @@ using System.Collections.Generic;
 // Give the user four chances to guess the number.
 // Continue to display the success or failure messages as in phase 2
 
+// Phase 4
+// The program should be updated to...
+// Display the number of the user's current guess in the prompt. 
+// For example, if the user has already guessed one time, 
+// the prommpt should say something like Your guess (2)>.
+// End the loop early if the user guesses the correct number.
 
-
+// Phase 5
+// The program should be updated to...
+// Use a random number to set the secret number between 1 and 100 instead of a hard-coded number.
+// The prompt should display the number of guesses the user has left.
 // int i = 0;
+
+// Phase 6
+// The program should be updated to...
+// Inform the user if their guess was too high or too low, when they guess incorrectly.
 
 for (int i = 0; i < 4; i++)
 {
@@ -51,7 +65,8 @@ for (int i = 0; i < 4; i++)
            string num = Console.ReadLine();
            int parsedInput = int.Parse(num);
 
-int secretNumber = 42;
+Random rnd = new Random();
+int secretNumber = rnd.Next(0,101);
 if (parsedInput == secretNumber && i <= 4)
 {
     Console.WriteLine("Great you got it");
